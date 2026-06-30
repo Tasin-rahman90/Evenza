@@ -8,7 +8,7 @@ import client4 from '../assets/Figure → event-schedule-image-4.jpg.png'
 const Time = () => {
     return (
         <>
-            <DateTime Img={client} TimeText="9:00 AM - 5:30 PM" TimeHeaLine="Professional Skills Development Workshop" TimeIntudraction='Unlock your potential and elevate your career with our Professional Skills
+            <DateTime Img={client} TimeText="9:00 AM - 5:30 PM" TimeHeaLine="Professional One Skills Development Workshop" TimeIntudraction='Unlock your potential and elevate your career with our Professional Skills
             Development designed students, working professionals.' TimeP="22 March 2025"
             />
             <DateTime Img={client2} TimeText="10:00 AM - 4:00 PM" TimeHeaLine="Leadership & Growth Conference" TimeIntudraction='Unlock your potential and elevate your career with our Professional Skills

@@ -15,10 +15,10 @@ const DateTime = ({
 
                 <div className='flex text-white items-center justify-between leading-6.5 mt-10'>
 
-                    <div className='flex items-center gap-7.5'>
+                    <div className='flex items-center gap-7.5 '>
                         <img src={Img} alt="" />
                         <div>
-                            <h3 className='text-[20px] font-bold'>{TimeText}</h3>
+                            <h3 className='text-[20px] font-bold '>{TimeText}</h3>
                             <p>{TimeP}</p>
                         </div>
                     </div>

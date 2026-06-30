@@ -1,36 +1,73 @@
-import React from 'react'
-import logo from "../assets/logo.png"
-import Container from './Container'
-import Flex from './Flex'
-import Button from './Button'
+import React from "react";
+import { motion } from "framer-motion";
+
+import logo from "../assets/logo.png";
+import Container from "./Container";
+import Flex from "./Flex";
+import Button from "./Button";
 
 const NavBar = () => {
   return (
-    <>
-      <nav className=' absolute top-0 left-0 w-full backdrop-blur-sm text-white py-6.25'>
-        <Container>
-            <Flex className="justify-between items-center"> 
-        <div>
-            <div>
-                <img src={logo} alt="" />
-            </div>
-        </div>
-        <ul className='flex gap-5'>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Schedule</li>
-            <li>Blog</li>
-            <li>Pages</li>
-            <li>Contact Us</li>
-        </ul>
-        <Button>Join the Conference</Button>
-            </Flex>
-        </Container>
-      </nav>
-    </>
-  )
-}
+    <nav className="absolute top-0 left-0 w-full backdrop-blur-sm text-white py-6.25 z-50">
+      <Container>
+        <Flex className="justify-between items-center">
 
-export default NavBar
+         
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <img src={logo} alt="Logo" className="cursor-pointer" />
+          </motion.div>
 
+          
+          <motion.ul
+            className="flex gap-5"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              staggerChildren: 0.15,
+            }}
+          >
+            {[
+              "Home",
+              "About Us",
+              "Schedule",
+              "Blog",
+              "Pages",
+              "Contact Us",
+            ].map((item, index) => (
+              <motion.li
+                key={index}
+                whileHover={{
+                  scale: 1.1,
+                  color: "#F59E0B",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="cursor-pointer transition-colors duration-300"
+              >
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
 
+          
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <Button>Join the Conference</Button>
+          </motion.div>
+
+        </Flex>
+      </Container>
+    </nav>
+  );
+};
+
+export default NavBar;
