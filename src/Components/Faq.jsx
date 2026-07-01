@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FaqImg from '../assets/Faq.png'
+import FaqImg from '../assets/Link (3).png'
 import Container from './Container'
 import Flex from './Flex'
 import SecHead from './SecHead'
